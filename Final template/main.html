@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supra Press - Moderní tisk a polygrafie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-section {
+           
+            background-size: cover;
+            background-position: center;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("hero-background-img.jpg");
+        }
+        .card-hover:hover { 
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Hlavička a navigace -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">Supra<span class="text-indigo-600">Press</span></a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#services" class="text-gray-600 hover:text-indigo-600 transition duration-300">Služby</a>
+                <a href="#gallery" class="text-gray-600 hover:text-indigo-600 transition duration-300">Galerie</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">O nás</a>
+                <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-300">Kontakt</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobilní menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#services" class="block py-2 text-gray-600 hover:text-indigo-600">Služby</a>
+            <a href="#gallery" class="block py-2 text-gray-600 hover:text-indigo-600">Galerie</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600">O nás</a>
+            <a href="#contact" class="block mt-2 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">Kontakt</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Úvodní sekce -->
+        <section class="hero-section text-white h-[60vh] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Kvalitní tisk, bezchybný design</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Od vizitek po svatební oznámení, přivedeme vaši vizi k životu s precizností a kreativitou.</p>
+                <a href="#contact" class="bg-white text-indigo-600 font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition duration-300">Získat nabídku</a>
+            </div>
+        </section>
+
+        <!-- Sekce Služby -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Naše služby</h2>
+                    <p class="text-gray-600 mt-2">Nabízíme širokou škálu profesionálních tiskových služeb.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Služba 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md transition duration-300 card-hover">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-stamp fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Razítka</h3>
+                        <p class="text-gray-600">Kvalitní a odolná razítka na míru pro vaši firmu nebo osobní potřebu. Ideální pro firemní identitu a oficiální použití.</p>
+                    </div>
+                    <!-- Služba 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md transition duration-300 card-hover">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-id-card fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Vizitky</h3>
+                        <p class="text-gray-600">Udělejte dojem s profesionálně navrženými a vytištěnými vizitkami. Různé povrchové úpravy a druhy papíru.</p>
+                    </div>
+                    <!-- Služba 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md transition duration-300 card-hover">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-envelope-open-text fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Svatební oznámení</h3>
+                        <p class="text-gray-600">Elegantní a krásná svatební oznámení přizpůsobená vašemu velkému dni. K dispozici jsou kompletní tiskové sady.</p>
+                    </div>
+                     <!-- Služba 4 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md transition duration-300 card-hover">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-file-alt fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Letáky a brožury</h3>
+                        <p class="text-gray-600">Propagujte své akce nebo podnikání pomocí poutavých letáků a brožur, dostupných v různých velikostech a provedeních.</p>
+                    </div>
+                     <!-- Služba 5 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md transition duration-300 card-hover">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-book-open fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Vazba diplomových prací</h3>
+                        <p class="text-gray-600">Profesionální a bezpečná vazba pro vaši diplomovou práci. Zajistíme, aby vaše tvrdá práce byla dokonale prezentována.</p>
+                    </div>
+                     <!-- Služba 6 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md transition duration-300 card-hover">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-gem fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Slepotisk a ražba</h3>
+                        <p class="text-gray-600">Přidejte nádech sofistikovanosti slepotiskem a ražbou pro decentní, hmatový efekt na vašich projektech.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce Galerie -->
+        <section id="gallery" class="bg-white py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Naše práce</h2>
+                    <p class="text-gray-600 mt-2">Nahlédnutí do kvality a kreativity, kterou dodáváme.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/400x600/6366f1/ffffff?text=Razítko" alt="Razítko na míru"></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/400x400/e2e8f0/333333?text=Ražba" alt="Detail ražby"></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/400x400/e2e8f0/333333?text=Vizitka" alt="Vizitka"></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/400x600/6366f1/ffffff?text=Oznámení" alt="Svatební oznámení"></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/400x600/6366f1/ffffff?text=Leták" alt="Propagační leták"></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/400x400/e2e8f0/333333?text=Vazba" alt="Vazba práce"></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/400x400/e2e8f0/333333?text=Projekt+SupraPress" alt="Projekt SupraPress"></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/400x600/6366f1/ffffff?text=Kalendář" alt="Kalendář na míru"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce O nás -->
+        <section id="about" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6 lg:px-12">
+    <!-- Nadpis -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">O SupraPress</h2>
+      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        Tradiční řemeslo propojené s moderními technologiemi — pro výjimečné tiskové výsledky.
+      </p>
+    </div>
+
+    <!-- Obsah -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <!-- Obrázek -->
+      <div class="flex justify-center">
+        <img src="dílna.webp" alt="Dílna SupraPress" class="rounded-xl shadow-lg w-full max-w-md object-cover">
+      </div>
+
+      <!-- Text -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-6">
+          Váš spolehlivý partner v tisku od roku 1999
+        </h3>
+        <p class="text-gray-600 mb-4">
+          Společnost SUPRA PRESS s.r.o. se sídlem v Kladně zajišťuje polygrafickou výrobu a nakladatelskou činnost
+          v celém Středočeském kraji. Jsme hrdí na to, že spojujeme tradiční řemeslo s moderní technologií, 
+          abychom dosáhli výjimečných výsledků.
+        </p>
+        <p class="text-gray-600">
+          Naším závazkem je kvalita, spokojenost zákazníků a kreativní přístup ke každému projektu, ať už je malý či velký.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!-- Kontaktní sekce -->
+        <section id="contact" class="bg-indigo-700 text-white py-20">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Kontaktujte nás</h2>
+                    <p class="mt-2">Máte projekt na mysli? Rádi se o něm dozvíme více.</p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-white text-gray-800 rounded-lg shadow-2xl p-8 md:p-12">
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <input type="text" placeholder="Vaše jméno" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <input type="email" placeholder="Váš e-mail" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <textarea placeholder="Vaše zpráva" rows="5" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-6"></textarea>
+                        <div class="text-center">
+                            <button type="submit" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition duration-300">Odeslat zprávu</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Patička -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 SupraPress. Všechna práva vyhrazena.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="hover:text-indigo-400"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-indigo-400"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-indigo-400"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Přepínání mobilního menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Plynulé posouvání pro kotvící odkazy
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+        
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
